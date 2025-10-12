@@ -317,8 +317,6 @@ void viewWordByPrefix(){
 
 }
 
-
-
 void exitProgram(){
 
     system("cls");
