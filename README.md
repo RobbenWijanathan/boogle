@@ -1,37 +1,27 @@
-# 🧠 Boogle — A Trie-Powered Slang Dictionary (C)
+# Boogle — A Trie-Powered Slang Dictionary (C)
 
-> A fast, text-UI slang dictionary featuring add/search/list and **prefix-based lookup** — all backed by a compact **Trie** for efficient string storage and retrieval.
+Boogle is a text-based slang dictionary written in C. It supports adding terms, searching, listing entries, and performing prefix-based lookups. All operations are implemented using a Trie for efficient string storage and retrieval.
 
----
+## Overview
+Users can insert slang words with descriptions, search for exact matches, list all words alphabetically, and retrieve suggestions based on a typed prefix. The interface is fully text-based and keyboard-driven.
 
-## 📘 Overview
-**Boogle** is a console application written in C that acts as a slang dictionary.  
-Users can add words with descriptions, search exact matches, list all entries, and discover words by **typing a prefix** and seeing live matches.  
-The UI is fully keyboard-driven and optimized for speed.
+## Features
+- Insert new slang terms with descriptions  
+- Search for existing terms  
+- List all terms  
+- Prefix-based lookup  
+- Implemented with a Trie data structure  
 
----
-
-## 🚀 Features
-- ➕ **Insert** new slang terms with short descriptions (validated: lowercase, no spaces)
-- 🔍 **Search** for words directly
-- 📜 **List all** slang terms in alphabetical order
-- ✨ **Prefix Search** – instantly show suggestions as you type
-- 🧩 Built using a **Trie Data Structure** for fast lookups
-- 💾 Lightweight & memory-efficient (pure C implementation)
-
----
-
-## ⚙️ How It Works (Data Structure)
+## Data Structure
 Each Trie node contains:
-- `children[26]` → pointers for each lowercase alphabet
-- `bool isEndOfWord` → marks the end of a valid word
-- `char description[100]` → stores the slang definition
+- `children[26]` for lowercase letters  
+- `isEndOfWord` flag  
+- `description[100]` for storing definitions  
 
 ### Core Operations
 | Operation | Description |
-|------------|-------------|
-| `insert(word, description)` | Inserts a slang term and saves its meaning |
-| `search(word)` | Finds a slang term in the dictionary |
-| `traverse(root)` | Displays all words & their meanings |
-| `displayWordsByPrefix(prefix)` | Displays all slang terms starting with a given prefix |
----
+|----------|-------------|
+| `insert(word, description)` | Adds a slang term and its meaning |
+| `search(word)` | Looks up a term |
+| `traverse(root)` | Lists all terms |
+| `displayWordsByPrefix(prefix)` | Lists all terms beginning with a prefix |
